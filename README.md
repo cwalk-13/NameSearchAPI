@@ -21,10 +21,10 @@
 
 ### Testing
 * Microsoft Visual Studio
- * While inside the project, click "Test" in the toolbar, then "Run All Tests"
+  * While inside the project, click "Test" in the toolbar, then "Run All Tests"
 * Visual Studio Code 
- *  Cd into "NameSearchTests" directory
- *  Enter "dotnet test" in the terminal
+  *  Cd into "NameSearchTests" directory
+  *  Enter "dotnet test" in the terminal
 
 
 
