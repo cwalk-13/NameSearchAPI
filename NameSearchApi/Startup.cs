@@ -36,7 +36,7 @@ namespace NameSearchApi
             //services.AddScoped<IPersonData, SqlPersonData>();
 
             //This line is for working with the Mock db
-            services.AddScoped<IPersonData, MockPersonData>();
+            services.AddSingleton<IPersonData, MockPersonData>();
 
             services.AddSwaggerGen(c =>
             {

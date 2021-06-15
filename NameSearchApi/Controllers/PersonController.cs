@@ -18,7 +18,7 @@ namespace NameSearch.Api.Controllers
         private IPersonData _personData;
         public PersonController(IPersonData personData)
         {
-            _personData = personData;
+            this._personData = personData;
         }
 
         [HttpGet]

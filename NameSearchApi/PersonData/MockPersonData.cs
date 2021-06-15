@@ -21,6 +21,7 @@ namespace NameSearch.Api.PersonData
         {
             person.Id = Guid.NewGuid();
             people.Add(person);
+            //return person;
             return person;
         }
 
