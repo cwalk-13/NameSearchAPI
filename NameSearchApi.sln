@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSearchApi", "NameSearchApi\NameSearchApi.csproj", "{A85584AE-DF61-4C50-870B-86A67E3499F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSearchTests", "NameSearchTests\NameSearchTests.csproj", "{7B09B82A-5A83-45C8-8007-FBA1CA15CB96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A85584AE-DF61-4C50-870B-86A67E3499F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A85584AE-DF61-4C50-870B-86A67E3499F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A85584AE-DF61-4C50-870B-86A67E3499F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A85584AE-DF61-4C50-870B-86A67E3499F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B09B82A-5A83-45C8-8007-FBA1CA15CB96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B09B82A-5A83-45C8-8007-FBA1CA15CB96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B09B82A-5A83-45C8-8007-FBA1CA15CB96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B09B82A-5A83-45C8-8007-FBA1CA15CB96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9E8DBE9-A1D4-4423-BA11-4E61CDC8A6A1}
+	EndGlobalSection
+EndGlobal
