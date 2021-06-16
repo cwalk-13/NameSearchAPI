@@ -1,11 +1,14 @@
-﻿using Microsoft.Extensions.Logging;
+﻿/*
+ * Charles Walker
+ * PersonController.cs
+ * This is the controller where the API calls are defined
+ */
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NameSearch.Api.Models;
 using NameSearch.Api.PersonData;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Threading;
 
@@ -13,7 +16,7 @@ namespace NameSearch.Api.Controllers
 {
     
     [ApiController]
-    //[Route("[controller]")]
+
     public class PersonController : ControllerBase
     {
         private IPersonData _personData;

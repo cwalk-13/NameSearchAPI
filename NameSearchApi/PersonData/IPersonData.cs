@@ -1,4 +1,9 @@
-﻿using NameSearch.Api.Models;
+﻿/*
+ * Charles Walker
+ * IPersonData.cs
+ * This interface allows for Dependency injection
+ */
+using NameSearch.Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

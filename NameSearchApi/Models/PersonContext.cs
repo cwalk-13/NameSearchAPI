@@ -1,4 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿/*
+ * Charles Walker
+ * PersonContext.cs
+ * This file is not used, but would be used by "SqlPersonData.cs" as the DbContext
+ */
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +18,6 @@ namespace NameSearch.Api.Models
 
         }
         public DbSet<Person> People { get; set; }
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer(@"Data Source=.\sqlexpress;Initial Catalog=PeopleDB;Integrated Security=True");
-        //}
 
     }
 }

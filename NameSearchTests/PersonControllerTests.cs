@@ -1,3 +1,8 @@
+/*
+ * Charles Walker
+ * PersonControllerTests.cs
+ * These are the unit tests for the "SearchName" and "AddPerson" API calls
+ */
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +22,7 @@ namespace NameSearchTests
         private readonly new Mock<IPersonData> repositoryStub = new();
         private readonly Random rand = new();
         [Fact]
+        
         public void SearchName_WithNonExistentName_ReturnsNotFound()
         {
             //Arrange
@@ -27,7 +33,7 @@ namespace NameSearchTests
             var result = controller.SearchName("BadNameTest");
 
             //Assert
-            Assert.IsType<NotFoundResult>(result);
+            Assert.IsType<NotFoundResult>(result); // Asserts that the result is "Not Found" if a name that is non-existent is submitted
         }
 
         [Fact]
@@ -47,7 +53,7 @@ namespace NameSearchTests
 
             var res = okObjectResult.Value as Person;
 
-            Assert.Equal(expectedPerson, res);
+            Assert.Equal(expectedPerson, res); //Asserts that the person that was added exists in the database
 
             Assert.Equal(expectedPerson.Id, res.Id);
             Assert.Equal(expectedPerson.Name, res.Name);
@@ -58,7 +64,7 @@ namespace NameSearchTests
 
         }
 
-        private Person CreateRandomPerson()
+        private Person CreateRandomPerson() //Helper function to create a random user
         {
             return new()
             {

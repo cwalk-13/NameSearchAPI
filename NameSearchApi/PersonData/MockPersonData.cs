@@ -1,4 +1,8 @@
-﻿
+﻿/*
+ * Charles Walker
+ * MockPersonData.cs
+ * This file creates a mock/in-memory database and handles the API calls to that mock database. It is used in place of "SqlPersonData.cs"
+ */
 using NameSearch.Api.Models;
 using System;
 using System.Collections.Generic;

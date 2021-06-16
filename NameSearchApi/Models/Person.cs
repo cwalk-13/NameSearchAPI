@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Charles Walker
+ * Person.cs
+ * This is the Person class that outlines the Person object
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

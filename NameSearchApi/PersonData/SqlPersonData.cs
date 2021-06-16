@@ -1,4 +1,9 @@
-﻿using NameSearch.Api.Models;
+﻿/*
+ * Charles Walker
+ * SqlPersonData.cs
+ * This file is not used, but is for handling the API calls to an SQL database 
+ */
+using NameSearch.Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
