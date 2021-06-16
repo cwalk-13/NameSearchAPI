@@ -32,5 +32,9 @@
   *  Cd into "NameSearchTests" directory
   *  Enter "dotnet test" in the terminal
 
+## Online Resources
+* ["Asp.Net Core Web API - CRUD operations in REST API Tutorial using Entity Framework Core"](https://youtu.be/r4LlIhyQ9GY)
+* ["Entity Framework Core : Code First | Getting Started - EP01"](https://youtu.be/g3ekrMJkXiA)
+
 
 
