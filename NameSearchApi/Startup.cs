@@ -32,7 +32,6 @@ namespace NameSearchApi
 
             // These two lines are used for working with the local db
             //services.AddDbContextPool<PersonContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PersonContextConnectionString")));
-
             //services.AddScoped<IPersonData, SqlPersonData>();
 
             //This line is for working with the Mock db

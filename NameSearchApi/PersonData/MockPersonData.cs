@@ -1,4 +1,5 @@
-﻿using NameSearch.Api.Models;
+﻿
+using NameSearch.Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,6 @@ namespace NameSearch.Api.PersonData
         {
             person.Id = Guid.NewGuid();
             people.Add(person);
-            //return person;
             return person;
         }
 

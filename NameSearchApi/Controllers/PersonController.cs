@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace NameSearch.Api.Controllers
 {
@@ -32,13 +33,21 @@ namespace NameSearch.Api.Controllers
         [Route("api/[controller]/name/{name}")]
         public IActionResult SearchName(string name)
         {
-            var person = _personData.SearchName(name);
+            CancellationTokenSource source = new CancellationTokenSource();
+            List<Person> person = null;
 
-            if(person == null)
+
+            var delay = Task.Delay(2000).ContinueWith(_ => //this simulates latency in the API call
+            {
+                person = _personData.SearchName(name);
+                return person;
+            });
+
+            if (delay.Result == null)
             {
                 return NotFound();
             }
-            return Ok(person);
+            return Ok(delay.Result);
         }
 
         [HttpGet]
@@ -58,8 +67,18 @@ namespace NameSearch.Api.Controllers
         [Route("api/[controller]")]
         public IActionResult AddPerson(Person person)
         {
-            _personData.AddPerson(person);
-            return Created(HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + HttpContext.Request.Path + "/" + person.Id, person);
+            //_personData.AddPerson(person);
+            var delay = Task.Delay(2000).ContinueWith(_ => //this simulates latency in the API call
+            {
+                _personData.AddPerson(person);
+                return Created(HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + HttpContext.Request.Path + "/" + person.Id, person);
+            });
+
+            if (delay.Result.Value == null)
+            {
+                return NotFound();
+            }
+            return Ok(delay.Result.Value);
         }
 
         [HttpDelete]
