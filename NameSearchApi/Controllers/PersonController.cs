@@ -19,7 +19,7 @@ namespace NameSearch.Api.Controllers
 
     public class PersonController : ControllerBase
     {
-        private IPersonData _personData;
+        private IPersonData _personData; //Dependency injection ensures that a new instance of the interface is not created, and that all API calls will operate with the same data
         public PersonController(IPersonData personData)
         {
             this._personData = personData;
@@ -27,18 +27,16 @@ namespace NameSearch.Api.Controllers
 
         [HttpGet]
         [Route("api/[controller]")]
-        public IActionResult GetPeople()
+        public IActionResult GetPeople() // Returns all "Person" objects in the database
         {
             return Ok(_personData.GetPeople());
         }
 
         [HttpGet]
         [Route("api/[controller]/name/{name}")]
-        public IActionResult SearchName(string name)
+        public IActionResult SearchName(string name) // Returns a list of all people with the name argument
         {
-            CancellationTokenSource source = new CancellationTokenSource();
             List<Person> person = null;
-
 
             var delay = Task.Delay(2000).ContinueWith(_ => //this simulates latency in the API call
             {
@@ -55,7 +53,7 @@ namespace NameSearch.Api.Controllers
 
         [HttpGet]
         [Route("api/[controller]/{id}")]
-        public IActionResult GetIDPerson(Guid id)
+        public IActionResult GetIDPerson(Guid id) // Returns a person given an Id
         {
             var person = _personData.GetIDPerson(id);
 
@@ -68,7 +66,7 @@ namespace NameSearch.Api.Controllers
 
         [HttpPost]
         [Route("api/[controller]")]
-        public IActionResult AddPerson(Person person)
+        public IActionResult AddPerson(Person person) //Returns the newly created person
         {
             //_personData.AddPerson(person);
             var delay = Task.Delay(2000).ContinueWith(_ => //this simulates latency in the API call
@@ -86,7 +84,7 @@ namespace NameSearch.Api.Controllers
 
         [HttpDelete]
         [Route("api/[controller]/{id}")]
-        public IActionResult DeletePerson(Guid id)
+        public IActionResult DeletePerson(Guid id) //Deletes a person given an Id
         {
             var person = _personData.GetIDPerson(id);
 
@@ -101,7 +99,7 @@ namespace NameSearch.Api.Controllers
 
         [HttpPatch]
         [Route("api/[controller]/{id}")]
-        public IActionResult EditPerson(Guid id, Person person)
+        public IActionResult EditPerson(Guid id, Person person) //Updates a person's attributes
         {
             var cur_person = _personData.GetIDPerson(id);
 
